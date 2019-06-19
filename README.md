@@ -1,3 +1,5 @@
 # Digital Image Processing Using MATLAB 2nd Ed.
 
-Teaching Materials
+Master Branch - Teaching Materials
+
+Source Code Branch - DIPUM2E Source Code
