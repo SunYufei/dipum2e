@@ -1,6 +1,10 @@
-f = imread('Fig0309(a).tif');
-f = tofloat(f);
-F = fft2(f);
-S = fftshift(log(1 + abs(F)));
-subplot(121), imshow(f);
-subplot(122), imshow(S, []);
+f = imread('Fig0323(a).tif');
+subplot(131), imshow(f);
+
+Hrecpass = recnotch('pass', 'vertical', M, N, 3, 15, 15);
+interference = dftfilt(f, Hrecpass);
+
+subplot(132), imshow(fftshift(Hrecpass));
+
+interference = gscale(interference);
+subplot(133), imshow(interference);
